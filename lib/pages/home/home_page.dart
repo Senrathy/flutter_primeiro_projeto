@@ -4,6 +4,11 @@ enum PopupMenuPages {
   container,
   rowsColumns,
   mediaQuery,
+  layoutBuilder,
+  botoesRotacao,
+  singleChildScrollView,
+  listView,
+  dialogs,
 }
 
 class HomePage extends StatelessWidget {
@@ -29,6 +34,21 @@ class HomePage extends StatelessWidget {
                   case PopupMenuPages.mediaQuery:
                     Navigator.of(context).pushNamed('/media_query');
                     break;
+                  case PopupMenuPages.layoutBuilder:
+                    Navigator.of(context).pushNamed('/layout_builder');
+                    break;
+                  case PopupMenuPages.botoesRotacao:
+                    Navigator.of(context).pushNamed('/bot_rotacao');
+                    break;
+                  case PopupMenuPages.singleChildScrollView:
+                    Navigator.of(context).pushNamed('/singlechildscrollview');
+                    break;
+                  case PopupMenuPages.listView:
+                    Navigator.of(context).pushNamed('/listview');
+                    break;
+                  case PopupMenuPages.dialogs:
+                    Navigator.of(context).pushNamed('/dialogs');
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -45,6 +65,26 @@ class HomePage extends StatelessWidget {
                     value: PopupMenuPages.mediaQuery,
                     child: Text('Media Query'),
                   ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.layoutBuilder,
+                    child: Text('Layout Builder'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.botoesRotacao,
+                    child: Text('Botoes Rotação Texto'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.singleChildScrollView,
+                    child: Text('SingleChildScrollView'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.listView,
+                    child: Text('ListView'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.dialogs,
+                    child: Text('Dialogs'),
+                  )
                 ];
               })
         ],
