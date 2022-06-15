@@ -8,6 +8,7 @@ import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart
 import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_columns_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_page.dart';
+import 'package:flutter_primeiro_projeto/pages/snackbar/snackbar_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Primeiro Projeto',
       theme: ThemeData(
+        primaryColor: Colors.purple[900],
         primarySwatch: Colors.blue,
+        backgroundColor: Colors.amber,
+        primaryColorDark: Colors.purple[900],
+        appBarTheme: AppBarTheme(color: Colors.purple[900]),
       ),
       routes: {
         '/' : (_) => const HomePage(),
@@ -33,6 +38,8 @@ class MyApp extends StatelessWidget {
         '/singlechildscrollview': (_) => const SingleChildScrollViewPage(),
         '/listview': (_) => const ListViewPage(),
         '/dialogs': (_) => const DialogsPage(),
+        '/snackbar': (_) => const SnackbarPage(),
+
       },
     );
   }
