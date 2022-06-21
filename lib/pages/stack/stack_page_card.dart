@@ -22,19 +22,22 @@ class StackPageCard extends StatelessWidget {
               ),
             ),
           ),
-          Container(color: Colors.white12,),
+          Container(
+            color: Colors.white12,
+          ),
           Positioned(
             top: 30,
             left: 10,
             right: 10,
             child: Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
               elevation: 12,
               child: Column(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: const Text(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Text(
                       'São José do Rio Preto',
                       style: TextStyle(
                         fontSize: 20,
@@ -43,8 +46,8 @@ class StackPageCard extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: const Text(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
                       'Emancipado de Jaboticabal na década de 1850, o nome do município é uma mistura entre o padroeiro, São José, e o Rio Preto, rio que passa pelo município. Hoje, é formada pelos distritos de Engenheiro Schmitt, São José do Rio Preto (Distrito-Sede) e Talhado, e subdivide-se em cerca de 360 bairros, loteamentos e residenciais.[8] É um dos principais polos industriais, culturais e de serviços do interior de São Paulo. Sua história econômica esteve por muito tempo ligada à cafeicultura, também presente em grande parte do estado de São Paulo, principalmente no início do século XX.',
                     ),
                   )
