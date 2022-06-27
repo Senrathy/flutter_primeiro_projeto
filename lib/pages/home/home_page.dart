@@ -13,7 +13,11 @@ enum PopupMenuPages {
   forms,
   cidades,
   stack,
-  stackCard
+  stackCard,
+  bottomBar,
+  circleAvatar,
+  colors,
+  materialBanner,
 }
 
 class HomePage extends StatelessWidget {
@@ -68,6 +72,18 @@ class HomePage extends StatelessWidget {
                     break;
                   case PopupMenuPages.stackCard:
                     Navigator.of(context).pushNamed('/stackcard');
+                    break;
+                  case PopupMenuPages.bottomBar:
+                    Navigator.of(context).pushNamed('/bottombar');
+                    break;
+                  case PopupMenuPages.circleAvatar:
+                    Navigator.of(context).pushNamed('/circle_avatar');
+                    break;
+                  case PopupMenuPages.colors:
+                    Navigator.of(context).pushNamed('/colors');
+                    break;
+                  case PopupMenuPages.materialBanner:
+                    Navigator.of(context).pushNamed('/material_banner');
                     break;
                 }
               },
@@ -124,12 +140,30 @@ class HomePage extends StatelessWidget {
                   const PopupMenuItem<PopupMenuPages>(
                     value: PopupMenuPages.stackCard,
                     child: Text('Stack Card'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.bottomBar,
+                    child: Text('Bottom Bar'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.circleAvatar,
+                    child: Text('Circle Avatar'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.colors,
+                    child: Text('Wanna see your true colors'),
+                  ),
+                  const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.materialBanner,
+                    child: Text('Material Banner'),
                   )
                 ];
               })
         ],
       ),
-      body: Container(),
+      body: Container(
+        color: Colors.grey,
+      ),
     );
   }
 }
